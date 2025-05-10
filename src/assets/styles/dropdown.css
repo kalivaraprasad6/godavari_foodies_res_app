@@ -1,0 +1,20 @@
+.drop-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  width: 800px;
+
+  border: 1px solid grey;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.drop-down {
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px;
+}
+.heading {
+  text-align: center;
+  margin: 30px;
+}

@@ -1,0 +1,131 @@
+h2.header {
+  color: rgb(244, 238, 238);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 30px;
+  font-style: italic;
+  font-weight: 800;
+}
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 2rem;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+  margin-top: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: px;
+  padding: 12px;
+  margin: auto;
+  max-width: 1200px;
+}
+.imgDiv {
+  height: max-content;
+  width: 270px; /* or any fixed width */
+  margin: 20px;
+  padding: auto;
+  padding-bottom: 20px;
+  align-items: center;
+  align-content: center;
+  background-color: #f6951e;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+}
+
+.imgDiv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
+.image {
+  border-radius: 20px 20px 0 0;
+}
+.title {
+  text-align: left;
+  padding-left: 4px;
+  padding-top: 12px;
+  font-size: 14px;
+  color: black;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 160px;
+  display: block;
+  margin-top: 6px;
+}
+
+.detailDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.rating {
+  padding-top: 12px;
+  margin-right: 5px;
+  font-size: 14px;
+  color: black;
+  font-weight: 800;
+  margin-top: 6px;
+}
+.star {
+  padding-top: 12px;
+  margin-right: 10px;
+  margin-top: 8px;
+
+  color: black;
+  font-weight: 800;
+}
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 300px;
+  padding: 8px;
+  border: 2px solid #f6951e;
+  border-radius: 4px;
+}
+.title:hover {
+  color: white;
+  cursor: pointer;
+}
+.rating:hover {
+  color: white;
+  cursor: pointer;
+}
+.star:hover {
+  color: white;
+  cursor: pointer;
+}
+.cartBtn {
+  border: 1px solid rgb(122, 121, 121);
+  margin-right: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: rgb(246 91 29);
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cartBtn:hover {
+  background-color: rgb(3, 143, 19);
+}
+
+.cartBtn:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
