@@ -1,0 +1,14 @@
+.modal-box {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  width: 600px;
+  height: 300px;
+  background: rgb(88, 84, 83);
+  border: 2px solid black;
+  padding: 20px;
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}

@@ -4,10 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { removeFromCart, clearCart } from '../store/slices/cartSlice.js';
 import { placeOrder } from '../store/slices/ordersSlice.js';
 import Practice from '../components/Practice.jsx';
+import Modal from '../components/Modals/Modal.jsx';
 import '../styles/cart.css';
 import '../styles/contact.css';
 export default function Cart() {
   const cartItems = useSelector(state => state.cart.items);
+  const [showModal, setShowModal] = React.useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -28,14 +30,12 @@ export default function Cart() {
     if (cartItems.length === 0) {
       alert('No items in cart');
     } else {
-      dispatch(placeOrder(cartItems)); //  Dispatch to store orders
-      dispatch(clearCart()); //  Clear cart
-      navigate('/orders'); //  Redirect
-
-      alert('Order placed successfully');
+      dispatch(placeOrder(groupedItems)); // use groupedItems here
+      dispatch(clearCart());
+      // Modal
+      setShowModal(true);
     }
   };
-
   return (
     <div>
       <h2 className='cart-heading'>Cart 🛒 </h2>
@@ -58,10 +58,22 @@ export default function Cart() {
           ))}
         </ul>
       )}
-
+      {showModal && (
+        <Modal
+          title='Order Placed'
+          content='Your order has been placed successfully!'
+          onClose={() => {
+            setShowModal(false);
+            navigate('/orders');
+          }}
+        />
+      )}
       <button
         className='orderProceed'
-        onClick={handleProceedOrders}>
+        onClick={() => {
+          handleProceedOrders();
+          setShowModal(true);
+        }}>
         Order
       </button>
       <Practice />

@@ -3,6 +3,7 @@ import classes from '../assets/styles/test.module.css';
 import { IoIosStarHalf } from 'react-icons/io';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/slices/cartSlice.js';
+import Modal from './Modals/Modal.jsx';
 export default function RestroCards() {
   const [menu, setMenu] = React.useState([]);
   const [error, setError] = React.useState(null);

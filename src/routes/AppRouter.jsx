@@ -5,10 +5,12 @@ import Footer from '../components/Footer/Footer';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Cart from '../pages/Cart';
-import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 import PageNotFound from '../pages/PageNotFound';
 import Dashboard from '../pages/Dashboard';
 import Orders from '../pages/Orders';
+import Login from '../pages/Login';
+import Contact from '../pages/Contact';
 
 export default function AppRouter() {
   return (
@@ -35,8 +37,8 @@ export default function AppRouter() {
               element={<Cart />}
             />
             <Route
-              path='/login'
-              element={<Login />}
+              path='/signup'
+              element={<SignUp />}
             />
             <Route
               path='*'
@@ -49,6 +51,14 @@ export default function AppRouter() {
             <Route
               path='/orders'
               element={<Orders />}
+            />
+            <Route
+              path='/users/login'
+              element={<Login />}
+            />
+            <Route
+              path='/contact'
+              element={<Contact />}
             />
           </Routes>
         </div>

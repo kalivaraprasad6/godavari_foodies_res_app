@@ -18,9 +18,14 @@ export default function Navbar() {
       path: '/about',
     },
     {
-      item: 'Login',
+      item: 'SignUp',
       cName: 'navitem',
-      path: '/login',
+      path: '/signup',
+    },
+    {
+      item: 'Contact',
+      cName: 'navitem',
+      path: '/contact',
     },
     {
       item: 'Cart',

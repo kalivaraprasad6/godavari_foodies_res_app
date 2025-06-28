@@ -66,3 +66,11 @@ h3 {
   font-size: 14px;
   color: #5081f4;
 }
+.login-btn {
+  display: grid;
+  border: 2px solid;
+  text-align: center;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 12px;
+}

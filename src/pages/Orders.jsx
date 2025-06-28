@@ -12,7 +12,7 @@ export default function Orders() {
         <ul>
           {orders.map((item, index) => (
             <li key={index}>
-              {item.name} - {item.id}
+              {item.name} -- {item.quantity} qty
             </li>
           ))}
         </ul>
